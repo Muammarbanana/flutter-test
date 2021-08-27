@@ -71,7 +71,11 @@ class _Test3PageState extends State<Test3Page> {
                       ],
                     ),
                   ],
-                )
+                ),
+                SizedBox(height: screenHeight * 0.05),
+                _buildCard("Total Bonus", "Rp. 5.000.000,00"),
+                SizedBox(height: screenHeight * 0.02),
+                _buildCard("Pending Bonus", "Rp. 50.000,00")
               ],
             ),
           ),
@@ -112,6 +116,44 @@ class _Test3PageState extends State<Test3Page> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
+  }
+
+  Container _buildCard(String text, String nominal) {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(32, 23, 0, 23),
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.15),
+            blurRadius: 20.0,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            text,
+            style: const TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.bold,
+              color: Colors.orange,
+            ),
+          ),
+          Text(
+            nominal,
+            style: const TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w600,
+              color: Color(0xFF6D6D6D),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
