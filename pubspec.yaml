@@ -57,6 +57,8 @@ flutter:
     - assets/assignment.png
     - assets/bell.png
     - assets/chrome_reader_mode.png
+    - assets/clock.png
+    - assets/dots.png
     - assets/flower1.png
     - assets/flower2.png
     - assets/flower3.png
