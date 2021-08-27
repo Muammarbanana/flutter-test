@@ -72,7 +72,9 @@ flutter:
     - assets/receipt.png
     - assets/restore.png
     - assets/rounded_arrow.jpg
+    - assets/rounded_arrow_green.jpg
     - assets/rounded_arrow_orange.jpg
+    - assets/shopping_bag.png
     - assets/star.png
     - assets/swap_horiz.png
 
