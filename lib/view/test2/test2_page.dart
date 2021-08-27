@@ -15,166 +15,168 @@ class _Test2PageState extends State<Test2Page> {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: const Color(0xFFFCF8F8),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(18, screenHeight * 0.06, 18.43, 0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Get.offAll(const HomePage());
-                        },
-                        child: SizedBox(
-                          height: 22,
-                          width: 22,
-                          child: Image.asset("assets/rounded_arrow.jpg"),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(18, screenHeight * 0.03, 18.43, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Get.offAll(const HomePage());
+                          },
+                          child: SizedBox(
+                            height: 22,
+                            width: 22,
+                            child: Image.asset("assets/rounded_arrow.jpg"),
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 10),
-                      const Text(
-                        "PORTFOLIO VENDOR",
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF202237),
-                        ),
-                      )
-                    ],
-                  ),
-                  const ImageIcon(
-                    AssetImage("assets/notifications.png"),
-                  ),
-                ],
-              ),
-              SizedBox(height: screenHeight * 0.03),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const CircleAvatar(
-                    radius: 52,
-                    backgroundColor: Colors.grey,
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundColor: Colors.white,
+                        const SizedBox(width: 10),
+                        const Text(
+                          "PORTFOLIO VENDOR",
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF202237),
+                          ),
+                        )
+                      ],
+                    ),
+                    const ImageIcon(
+                      AssetImage("assets/notifications.png"),
+                    ),
+                  ],
+                ),
+                SizedBox(height: screenHeight * 0.03),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    const CircleAvatar(
+                      radius: 52,
+                      backgroundColor: Colors.grey,
                       child: CircleAvatar(
-                        radius: 48,
-                        backgroundImage: AssetImage("assets/photo1.png"),
+                        radius: 50,
+                        backgroundColor: Colors.white,
+                        child: CircleAvatar(
+                          radius: 48,
+                          backgroundImage: AssetImage("assets/photo1.png"),
+                        ),
                       ),
                     ),
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "5.0",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
+                    Column(
+                      children: [
+                        Text(
+                          "5.0",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "Rating",
-                        style: TextStyle(
-                          fontSize: 13,
+                        Text(
+                          "Rating",
+                          style: TextStyle(
+                            fontSize: 13,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "100",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "Review",
-                        style: TextStyle(
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "162",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "Pesanan",
-                        style: TextStyle(
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: screenHeight * 0.009),
-              const Text(
-                "Dina Florist",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-              const Text(
-                  "Toko Bunga terbaiks se Indonesia Raya \nHarga Murah Produk Berkualitas"),
-              SizedBox(height: screenHeight * 0.012),
-              SizedBox(
-                height: 29,
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    side: const BorderSide(
-                      width: 0.5,
-                      color: Colors.grey,
+                      ],
                     ),
-                    elevation: 0,
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    "PORTFOLIO",
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
+                    Column(
+                      children: [
+                        Text(
+                          "100",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          "Review",
+                          style: TextStyle(
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "162",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          "Pesanan",
+                          style: TextStyle(
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: screenHeight * 0.009),
+                const Text(
+                  "Dina Florist",
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
+                const Text(
+                    "Toko Bunga terbaiks se Indonesia Raya \nHarga Murah Produk Berkualitas"),
+                SizedBox(height: screenHeight * 0.012),
+                SizedBox(
+                  height: 29,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      side: const BorderSide(
+                        width: 0.5,
+                        color: Colors.grey,
+                      ),
+                      elevation: 0,
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      "PORTFOLIO",
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: screenHeight * 0.002),
-              GridView.count(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                crossAxisSpacing: 2,
-                mainAxisSpacing: 2,
-                crossAxisCount: 3,
-                children: [
-                  buildCard("assets/flower1.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower3.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower2.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower2.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower1.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower3.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower1.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower2.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower3.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower3.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower1.png", "Nama Customer", 5.0),
-                  buildCard("assets/flower2.png", "Nama Customer", 5.0),
-                ],
-              )
-            ],
+                SizedBox(height: screenHeight * 0.002),
+                GridView.count(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  crossAxisSpacing: 2,
+                  mainAxisSpacing: 2,
+                  crossAxisCount: 3,
+                  children: [
+                    buildCard("assets/flower1.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower3.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower2.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower2.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower1.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower3.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower1.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower2.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower3.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower3.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower1.png", "Nama Customer", 5.0),
+                    buildCard("assets/flower2.png", "Nama Customer", 5.0),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

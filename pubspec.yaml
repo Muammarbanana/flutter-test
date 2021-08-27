@@ -64,6 +64,7 @@ flutter:
     - assets/move_to_inbox.png
     - assets/notes.png
     - assets/notifications.png
+    - assets/options.png
     - assets/photo1.png
     - assets/restore.png
     - assets/rounded_arrow.jpg

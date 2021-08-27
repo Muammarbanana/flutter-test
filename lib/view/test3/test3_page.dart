@@ -10,73 +10,193 @@ class Test3Page extends StatefulWidget {
 }
 
 class _Test3PageState extends State<Test3Page> {
+  List<Widget> rebateList = [];
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
+    rebateList
+        .add(_buildRebateList("#EC1201211", "Rp. 150.000", "14 Juli 2021"));
+    rebateList.add(const SizedBox(height: 18));
+    rebateList
+        .add(_buildRebateList("#EC1201211", "Rp. 150.000", "15 Juli 2021"));
+    rebateList.add(const SizedBox(height: 18));
+    rebateList
+        .add(_buildRebateList("#EC1201211", "Rp. 150.000", "15 Juli 2021"));
+    rebateList.add(const SizedBox(height: 18));
+    rebateList
+        .add(_buildRebateList("#EC1201211", "Rp. 150.000", "17 Juli 2021"));
+    rebateList.add(const SizedBox(height: 18));
+    rebateList
+        .add(_buildRebateList("#EC1201211", "Rp. 150.000", "17 Juli 2021"));
+    rebateList.add(const SizedBox(height: 18));
+    rebateList
+        .add(_buildRebateList("#EC1201211", "Rp. 150.000", "18 Juli 2021"));
     return Scaffold(
       backgroundColor: const Color(0xFFFEF9F9),
       body: Stack(children: [
-        SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(18, screenHeight * 0.06, 18.43, 0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
+        SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(18, screenHeight * 0.03, 18.43, 60),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Get.offAll(() => const HomePage());
+                            },
+                            child: SizedBox(
+                              height: 22,
+                              width: 22,
+                              child: Image.asset(
+                                  "assets/rounded_arrow_orange.jpg"),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          const Text(
+                            "FINANSIAL",
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF545454),
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {},
+                            child: SizedBox(
+                              height: 22,
+                              width: 22,
+                              child:
+                                  Image.asset("assets/assessment_gradient.png"),
+                            ),
+                          ),
+                          const SizedBox(width: 17),
+                          GestureDetector(
+                            onTap: () {},
+                            child: SizedBox(
+                              height: 22,
+                              width: 22,
+                              child: Image.asset("assets/bell.png"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: screenHeight * 0.05),
+                  _buildCard("Total Bonus", "Rp. 5.000.000,00"),
+                  SizedBox(height: screenHeight * 0.02),
+                  _buildCard("Pending Bonus", "Rp. 50.000,00"),
+                  SizedBox(height: screenHeight * 0.02),
+                  Container(
+                    padding: const EdgeInsets.only(top: 11, bottom: 20),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                    ),
+                    child: Column(
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            Get.offAll(() => const HomePage());
-                          },
-                          child: SizedBox(
-                            height: 22,
-                            width: 22,
-                            child:
-                                Image.asset("assets/rounded_arrow_orange.jpg"),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, right: 16),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                "Daftar Rebate",
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    height: 26,
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(6),
+                                        ),
+                                        primary: Colors.orange,
+                                        elevation: 0,
+                                      ),
+                                      onPressed: () {},
+                                      child: const Text(
+                                        "Semua",
+                                        style: TextStyle(
+                                          fontSize: 9,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  SizedBox(
+                                    height: 26,
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(6),
+                                        ),
+                                        primary: Colors.blue,
+                                        elevation: 0,
+                                      ),
+                                      onPressed: () {},
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            "Filter",
+                                            style: TextStyle(
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 9,
+                                            width: 9,
+                                            child: ImageIcon(
+                                              AssetImage("assets/options.png"),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          "FINANSIAL",
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF545454),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10, bottom: 10),
+                          height: 1,
+                          width: double.infinity,
+                          color: const Color(0xFFBBBBBB),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, right: 16),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [...rebateList],
                           ),
                         )
                       ],
                     ),
-                    Row(
-                      children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: SizedBox(
-                            height: 22,
-                            width: 22,
-                            child:
-                                Image.asset("assets/assessment_gradient.png"),
-                          ),
-                        ),
-                        const SizedBox(width: 17),
-                        GestureDetector(
-                          onTap: () {},
-                          child: SizedBox(
-                            height: 22,
-                            width: 22,
-                            child: Image.asset("assets/bell.png"),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(height: screenHeight * 0.05),
-                _buildCard("Total Bonus", "Rp. 5.000.000,00"),
-                SizedBox(height: screenHeight * 0.02),
-                _buildCard("Pending Bonus", "Rp. 50.000,00")
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ),
@@ -154,6 +274,77 @@ class _Test3PageState extends State<Test3Page> {
           ),
         ],
       ),
+    );
+  }
+
+  Row _buildRebateList(String id, String nominal, String tanggal) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "ID Transaksi",
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
+              ),
+            ),
+            Text(
+              id,
+              style: const TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF3D6670),
+              ),
+            ),
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Rebate",
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
+              ),
+            ),
+            Text(
+              nominal,
+              style: const TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF41BE06),
+              ),
+            ),
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Tanggal",
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
+              ),
+            ),
+            Text(
+              tanggal,
+              style: const TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF41BE06),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
