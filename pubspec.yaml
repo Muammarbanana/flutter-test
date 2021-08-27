@@ -68,7 +68,10 @@ flutter:
     - assets/notifications.png
     - assets/options.png
     - assets/person.png
+    - assets/phone.png
     - assets/photo1.png
+    - assets/photo2.jpg
+    - assets/pin.png
     - assets/receipt.png
     - assets/restore.png
     - assets/rounded_arrow.jpg
@@ -76,7 +79,9 @@ flutter:
     - assets/rounded_arrow_orange.jpg
     - assets/shopping_bag.png
     - assets/star.png
+    - assets/stroberi.png
     - assets/swap_horiz.png
+    - assets/vector.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -114,6 +119,18 @@ flutter:
         - asset: fonts/DMSans_Italic.ttf
           style: italic
         - asset: fonts/DMSans_Bold.ttf
+          weight: 700
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter_Regular.ttf
+        - asset: fonts/Inter_Bold.ttf
+          weight: 700
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans_Regular.ttf
+        - asset: fonts/OpenSans_Italic.ttf
+          style: italic
+        - asset: fonts/OpenSans_Bold.ttf
           weight: 700
   #
   # For details regarding fonts from package dependencies,
