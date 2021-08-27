@@ -14,6 +14,7 @@ class _Test2PageState extends State<Test2Page> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: const Color(0xFFFCF8F8),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.fromLTRB(18, screenHeight * 0.06, 18.43, 0),
@@ -153,6 +154,7 @@ class _Test2PageState extends State<Test2Page> {
               ),
               SizedBox(height: screenHeight * 0.002),
               GridView.count(
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 crossAxisSpacing: 2,
                 mainAxisSpacing: 2,
