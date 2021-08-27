@@ -3,6 +3,10 @@
    <application
         android:label="ordo_test"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.here.sdk.access_key_id" android:value="u8wxWd7ucZaiuAf-8f_9gg"/>
+        <meta-data android:name="com.here.sdk.access_key_secret" android:value="sdTTDmkfFRviL-CVxiD1zkouqL2YbJpi0PKZFV4cKvZk6Nt_ozLmqMJ0aZZwe6dm9HZbjZaPTOBMTxbi0wBTrA"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

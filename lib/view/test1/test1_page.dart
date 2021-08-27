@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:here_sdk/core.dart';
+import 'package:here_sdk/mapview.dart';
 import 'package:ordo_test/custom_widgets/custom_appbar.dart';
 
 class Test1Page extends StatefulWidget {
@@ -31,8 +33,17 @@ class _Test1PageState extends State<Test1Page> {
                     ],
                   ),
                   SizedBox(height: screenHeight * 0.03),
-                  Container(), //peta
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 60),
+              child: SizedBox(
+                height: double.infinity,
+                width: double.infinity,
+                child: HereMap(
+                  onMapCreated: _onMapCreated,
+                ),
               ),
             ),
             DraggableScrollableSheet(
@@ -381,6 +392,23 @@ class _Test1PageState extends State<Test1Page> {
           color: Colors.grey.withOpacity(0.3),
         )
       ],
+    );
+  }
+
+  void _onMapCreated(HereMapController hereMapController) {
+    hereMapController.mapScene.loadSceneForMapScheme(
+      MapScheme.normalDay,
+      (MapError? error) {
+        if (error != null) {
+          // ignore: avoid_print
+          print('Map scene not loaded. MapError: ${error.toString()}');
+          return;
+        }
+
+        const double distanceToEarthInMeters = 8000;
+        hereMapController.camera.lookAtPointWithDistance(
+            GeoCoordinates(-7.2458404, 112.7378177), distanceToEarthInMeters);
+      },
     );
   }
 }

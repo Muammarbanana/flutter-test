@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:here_sdk/core.dart';
 import 'package:ordo_test/view/homepage.dart';
 
 void main() {
+  SdkContext.init();
   runApp(MyApp());
 }
 

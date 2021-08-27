@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  ffi:
+    dependency: transitive
+    description:
+      name: ffi
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -74,6 +81,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.3.8"
+  here_sdk:
+    dependency: "direct main"
+    description:
+      path: "plugins/here_sdk"
+      relative: true
+    source: path
+    version: "4.8.2"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.17.0"
   lint:
     dependency: "direct dev"
     description:
@@ -165,3 +186,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.13.0 <3.0.0"
+  flutter: ">=2.0.0"
