@@ -33,19 +33,19 @@ class _Test3State extends State<Test3> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/chrome_reader_mode.png"),
+              AssetImage("assets/home_alt_fill.png"),
             ),
             label: "",
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/swap_horiz.png"),
+              AssetImage("assets/notes.png"),
             ),
             label: "",
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/move_to_inbox.png"),
+              AssetImage("assets/restore.png"),
             ),
             label: "",
           ),
