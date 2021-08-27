@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:ordo_test/view/homepage.dart';
+import 'package:ordo_test/custom_widgets/custom_appbar.dart';
 
 class Test3Page extends StatefulWidget {
   const Test3Page({Key? key}) : super(key: key);
@@ -30,55 +29,13 @@ class _Test3PageState extends State<Test3Page> {
                     EdgeInsets.fromLTRB(18, screenHeight * 0.03, 18.43, 60),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Get.offAll(() => const HomePage());
-                              },
-                              child: SizedBox(
-                                height: 22,
-                                width: 22,
-                                child: Image.asset(
-                                    "assets/rounded_arrow_orange.jpg"),
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            const Text(
-                              "FINANSIAL",
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF545454),
-                              ),
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 22,
-                                width: 22,
-                                child: Image.asset(
-                                    "assets/assessment_gradient.png"),
-                              ),
-                            ),
-                            const SizedBox(width: 17),
-                            GestureDetector(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 22,
-                                width: 22,
-                                child: Image.asset("assets/bell.png"),
-                              ),
-                            ),
-                          ],
-                        ),
+                    const CustomAppBar(
+                      backButtonAsset: "assets/rounded_arrow_orange.jpg",
+                      title: "FINANSIAL",
+                      titleColor: 0xFF545454,
+                      iconAssets: [
+                        "assets/assessment_gradient.png",
+                        "assets/bell.png",
                       ],
                     ),
                     SizedBox(height: screenHeight * 0.05),

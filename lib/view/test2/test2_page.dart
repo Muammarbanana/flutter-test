@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:ordo_test/view/homepage.dart';
+import 'package:ordo_test/custom_widgets/custom_appbar.dart';
 
 class Test2Page extends StatefulWidget {
   const Test2Page({Key? key}) : super(key: key);
@@ -22,35 +21,12 @@ class _Test2PageState extends State<Test2Page> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Get.offAll(const HomePage());
-                          },
-                          child: SizedBox(
-                            height: 22,
-                            width: 22,
-                            child: Image.asset("assets/rounded_arrow.jpg"),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          "PORTFOLIO VENDOR",
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF202237),
-                          ),
-                        )
-                      ],
-                    ),
-                    const ImageIcon(
-                      AssetImage("assets/notifications.png"),
-                    ),
+                const CustomAppBar(
+                  backButtonAsset: "assets/rounded_arrow.jpg",
+                  title: "PORTFOLIO VENDOR",
+                  titleColor: 0xFF202237,
+                  iconAssets: [
+                    "assets/notifications.png",
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.03),
