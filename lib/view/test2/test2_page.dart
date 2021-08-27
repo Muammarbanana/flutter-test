@@ -153,7 +153,7 @@ class _Test2PageState extends State<Test2Page> {
                     ),
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.002),
+                SizedBox(height: screenHeight * 0.021),
                 GridView.count(
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,

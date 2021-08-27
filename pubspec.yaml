@@ -54,6 +54,7 @@ flutter:
     - assets/arrow_narrow_right.png
     - assets/assessment.png
     - assets/assessment_gradient.png
+    - assets/assignment.png
     - assets/bell.png
     - assets/chrome_reader_mode.png
     - assets/flower1.png
@@ -63,8 +64,10 @@ flutter:
     - assets/mdi_racing_helmet.png
     - assets/move_to_inbox.png
     - assets/notes.png
+    - assets/notifications_none.png
     - assets/notifications.png
     - assets/options.png
+    - assets/person.png
     - assets/photo1.png
     - assets/receipt.png
     - assets/restore.png

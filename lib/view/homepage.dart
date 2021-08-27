@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ordo_test/custom_widgets/rounded_button.dart';
+import 'package:ordo_test/view/test1/test1_parent.dart';
 import 'package:ordo_test/view/test2/test2_parent.dart';
 import 'package:ordo_test/view/test3/test3_parent.dart';
 
@@ -32,7 +33,11 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: screenHeight * 0.123),
-              RoundedButton(onPressed: () {}, text: "Test 1"),
+              RoundedButton(
+                  onPressed: () {
+                    Get.to(() => const Test1());
+                  },
+                  text: "Test 1"),
               SizedBox(height: screenHeight * 0.03),
               RoundedButton(
                   onPressed: () {
